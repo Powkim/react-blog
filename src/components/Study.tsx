@@ -1,3 +1,4 @@
+//게시판
 const StudyPage=()=>{
     return
 }

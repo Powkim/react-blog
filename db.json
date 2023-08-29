@@ -13,7 +13,22 @@
       "postId": 1
     }
   ],
-  "project": {
-    "name": "typicode"
+  "project": [
+    {
+    "title": "test title",
+    "imageUrl":"https://github.com/codestates-seb/seb40_main_026/assets/107850055/02db135e-cb07-4300-a765-b6f8039032b1"
+  },
+  {
+    "title": "test title2",
+    "imageUrl":"https://github.com/codestates-seb/seb40_main_026/assets/107850055/02db135e-cb07-4300-a765-b6f8039032b1"
+  },
+  {
+    "title": "test title3",
+    "imageUrl":"https://github.com/codestates-seb/seb40_main_026/assets/107850055/02db135e-cb07-4300-a765-b6f8039032b1"
+  },
+  {
+    "title": "test title4",
+    "imageUrl":"https://github.com/codestates-seb/seb40_main_026/assets/107850055/02db135e-cb07-4300-a765-b6f8039032b1"
   }
+]
 }

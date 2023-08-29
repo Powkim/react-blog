@@ -1,10 +1,11 @@
+import React from "react"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { styled } from "styled-components"
 const MenuContainer = styled.header`
     padding: 5rem;
     height:5rem;
-    width: 70%;
+    width: 100%;
     /* height: 100vh; */
     margin: auto;
     display: flex;
@@ -34,8 +35,8 @@ const MenuItem= styled (Link)`
 `
 
 const Menu = ()=> {
-    const [MenuId,SetMenuId]=useState(4)
-
+    const [MenuId,SetMenuId]=useState<Number>(4)
+    const navigate=useNavigate()
     const filterdata = [
         {
           id: 1,
@@ -54,18 +55,18 @@ const Menu = ()=> {
           title: 'Study',
         }
       ];
-      const filterOn = (id) => {
+      const filterOn = (id:Number,title:String) => {
         if (id === MenuId) {
           SetMenuId(0);
         } else {
           SetMenuId(id);
         }
-
+        navigate(`/${title}`);
 
       };
     return <MenuContainer>
     {filterdata.map((items)=>{
-        return<span key={items.id} onClick={(()=>filterOn(items.id))} className={MenuId===items.id?"menuOn":""} >{items.title}</span>
+        return<span key={items.id} onClick={(()=>filterOn(items.id,items.title))} className={MenuId===items.id?"menuOn":""} >{items.title}</span>
     })}
     </MenuContainer>
 }
